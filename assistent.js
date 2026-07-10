@@ -20,7 +20,7 @@
     { k: ["cpa", "pro auftrag", "auftrag kost"], chip: null,
       a: "<b>CPA</b> hei&szlig;t &bdquo;Cost per Acquisition&ldquo; &mdash; was Sie ein gewonnener <b>Auftrag</b> insgesamt kostet (Werbebudget + unsere Betreuung, geteilt durch die Auftr&auml;ge). Unsere Erwartung: <b>ca. 90&ndash;150&nbsp;&euro; pro Auftrag</b>. Dem stehen laut BVSK-Tabelle 650&ndash;1.200&nbsp;&euro; Honorar gegen&uuml;ber &mdash; deshalb rechnet sich das so deutlich." },
     { k: ["roas", "umsatz pro", "rendite", "lohnt sich", "rechnet sich"], chip: null,
-      a: "<b>ROAS</b> = &bdquo;Return on Ad Spend&ldquo; &mdash; wie viel Umsatz jeder Werbe-Euro zur&uuml;ckbringt. Beispiel: 1.690&nbsp;&euro; Gesamtkosten, 16.200&nbsp;&euro; Honorarumsatz = ROAS von fast 10. Selbst im vorsichtigsten Szenario unserer Analyse liegt er bei knapp 4 &mdash; die Kampagne tr&auml;gt sich also auch, wenn vieles schlechter l&auml;uft als geplant." },
+      a: "<b>ROAS</b> = &bdquo;Return on Ad Spend&ldquo; &mdash; wie viel Umsatz jeder eingesetzte Euro zur&uuml;ckbringt. Beispiel: 1.690&nbsp;&euro; Gesamtkosten (Budget + Betreuung), 16.200&nbsp;&euro; Honorarumsatz = ROAS von 9,6. Selbst im vorsichtigsten Szenario liegt er bei gut 3 &mdash; die Kampagne tr&auml;gt sich also auch, wenn vieles schlechter l&auml;uft als geplant." },
     { k: ["impression share", "sichtbarkeit", "einblendung"], chip: null,
       a: "Der <b>Impression Share</b> sagt: Bei wie viel Prozent aller passenden Suchen wurde Ihre Anzeige tats&auml;chlich gezeigt? 70&nbsp;% hei&szlig;t: 7 von 10 Menschen, die in M&ouml;nchengladbach nach einem Gutachter suchen, sehen Sie. Je mehr Budget, desto h&ouml;her dieser Wert &mdash; das ist der Haupt-Unterschied zwischen den drei Varianten." },
     { k: ["lead", "anfrage was"], chip: null,
@@ -40,7 +40,7 @@
     { k: ["bvsk", "honorartabelle", "honorarbefragung"], chip: null,
       a: "Die <b>BVSK-Honorarbefragung</b> ist die offizielle Honorar-&Uuml;bersicht des Bundesverbands der KFZ-Sachverst&auml;ndigen &mdash; von Gerichten als Rechengrundlage anerkannt. Danach bringt ein Gutachten bei einem typischen 3.000-&euro;-Schaden ca. 650&ndash;750&nbsp;&euro; netto, bei gr&ouml;&szlig;eren Sch&auml;den bis 1.200&nbsp;&euro; und mehr. Das ist die Basis unserer gesamten Wirtschaftlichkeitsrechnung &mdash; gepr&uuml;ft gegen das Original-Dokument." },
     { k: ["konkurrenz", "wettbewerber", "petermann", "karpro", "unfallexpert", "kuban", "andere gutachter"], chip: null,
-      a: "Vier Wettbewerber sind in M&ouml;nchengladbach aktiv: <b>Petermann</b> (stark bei Google-Treffern, 18 Stadt-Seiten), <b>KarPro</b> (gro&szlig;er Radius, wenig Tiefe), <b>UnfallExpert24</b> (&uuml;berregional, wirbt mit Tankgutscheinen &mdash; zielt genau auf Rheydt) und <b>Kuban</b> (klassisches B&uuml;ro, ~3&nbsp;km von Ihnen). Gegen jeden haben Sie ein konkretes Argument &mdash; vor allem Ihr Rundum-Paket mit Abschleppservice und Mietwagen. Details im Datenblatt 4." },
+      a: "Vier Wettbewerber sind in M&ouml;nchengladbach aktiv: <b>Petermann</b> (stark bei Google-Treffern, 18 Stadt-Seiten), <b>KarPro</b> (gro&szlig;er Radius, verspricht 1&ndash;2&nbsp;h Reaktionszeit), <b>UnfallExpert24</b> (&uuml;berregional, wirbt mit Tankgutscheinen &mdash; zielt genau auf Rheydt) und <b>Kuban</b> (klassisches B&uuml;ro, ~3&nbsp;km von Ihnen). Ehrlich gesagt: Abschleppen, Mietwagen und Abwicklung <b>bewerben</b> auch Petermann und UnfallExpert24 &mdash; laut deren Websites aber organisiert bzw. vermittelt. Ihr haltbares Argument: Bei Ihnen kommt alles aus dem <b>eigenen Haus</b> (eigene Flotte, eigene Werkstatt, Meisterbetrieb). Details im Datenblatt 4." },
     { k: ["google ads", "wie funktioniert werbung", "anzeige funktion", "adwords"], chip: null,
       a: "<b>Google Ads</b> funktioniert so: Wenn jemand nach einem KFZ-Gutachter in M&ouml;nchengladbach googelt, erscheint Ihre Anzeige ganz oben &mdash; noch &uuml;ber den normalen Treffern. Sie zahlen nur, wenn jemand tats&auml;chlich klickt (ca. 3&ndash;6&nbsp;&euro;). Da nach einem Unfall fast jeder sofort anruft statt lange zu vergleichen, ist das der direkteste Weg zu neuen Auftr&auml;gen." },
     { k: ["keyword", "suchbegriff"], chip: null,
@@ -76,18 +76,18 @@
       chips: ["Was ist das Wichtigste?", "Wie sicher sind die Zahlen?", "Was kostet mich das?", "Welche Variante passt zu mir?"],
       qa: [
         { k: ["wichtigste", "kurzfassung", "zusammenfassung", "tldr"], chip: null,
-          a: "Das Wichtigste in drei S&auml;tzen: <b>1.</b> Ein Gutachten bringt Ihnen 650&ndash;1.200&nbsp;&euro;, ein Klick auf Ihre Anzeige kostet nur 3&ndash;6&nbsp;&euro; &mdash; deshalb rechnet sich die Kampagne selbst im schlechten Fall. <b>2.</b> Vier Wettbewerber sind aktiv, aber keiner hat Ihr Rundum-Paket (24/7, Abschleppen, Mietwagen). <b>3.</b> Empfehlung: Start mit 1.500&nbsp;&euro;/Monat Werbebudget. Details: Kapitel 01 und 03." },
+          a: "Das Wichtigste in drei S&auml;tzen: <b>1.</b> Ein Gutachten bringt Ihnen 650&ndash;1.200&nbsp;&euro;, ein Klick auf Ihre Anzeige kostet nur 3&ndash;6&nbsp;&euro; &mdash; deshalb rechnet sich die Kampagne selbst im schlechten Fall. <b>2.</b> Vier Wettbewerber sind aktiv &mdash; Ihr haltbarer Trumpf: Rundum-Service aus dem <b>eigenen Haus</b> (eigene Flotte, eigene Werkstatt), w&auml;hrend die anderen so etwas laut Website organisieren oder vermitteln. <b>3.</b> Empfehlung: Start mit 1.500&nbsp;&euro;/Monat Werbebudget. Details: Kapitel 01 und 03." },
         { k: ["sicher sind die zahlen", "zahlen sicher", "verlasslich", "gepruft", "quellen", "stimmt das"], chip: null,
           a: "Jede tragende Aussage wurde von drei unabh&auml;ngigen Pr&uuml;finstanzen <b>gegengepr&uuml;ft</b> &mdash; mit dem Auftrag, sie zu widerlegen. Ergebnis: 22 best&auml;tigt, 3 widerlegt (die widerlegten Branchenzahlen sind im Dokument als Warnung markiert). Alles ist mit Quellen belegt &mdash; Kapitel 12. Kennzeichnung: gr&uuml;n = verifiziert, gelb = Sch&auml;tzung mit offenen Annahmen." },
         { k: ["rechner", "regler", "ausprobieren", "simulation"], chip: null,
           a: "In Kapitel 06 gibt es einen <b>Was-w&auml;re-wenn-Rechner</b>: Bewegen Sie die Regler f&uuml;r Budget, Klickpreis und Anrufquote &mdash; alle Kennzahlen rechnen live mit. So sehen Sie selbst, wie robust die Rechnung ist." }
       ],
       tour: [
-        { sel: ".kpis", t: "Die Kernzahlen", x: "Honorar pro Gutachten, erwarteter Klickpreis, Ziel-Kosten pro Anfrage und das empfohlene Startbudget &mdash; alles Weitere im Dokument begr&uuml;ndet diese vier Zahlen." },
-        { sel: "#summary .verdict", t: "Das Urteil", x: "Falls Sie nur eine Stelle lesen: diese. Das Gesamtergebnis der Analyse in zwei S&auml;tzen." },
-        { sel: "#wettbewerb", t: "Ihre Konkurrenz", x: "Alle vier aktiven Wettbewerber &mdash; und zu jedem die passende Gegenstrategie mit Ihren vorhandenen St&auml;rken. Die Tabelle darunter zeigt: Die gr&ouml;&szlig;ten Marktl&uuml;cken besetzen Sie bereits." },
+        { s: 1, sel: ".kpis", t: "Die Kernzahlen", x: "Honorar pro Gutachten, erwarteter Klickpreis, Ziel-Kosten pro Anfrage und das empfohlene Startbudget &mdash; alles Weitere im Dokument begr&uuml;ndet diese vier Zahlen." },
+        { s: 1, sel: "#summary .verdict", t: "Das Urteil", x: "Falls Sie nur eine Stelle lesen: diese. Das Gesamtergebnis der Analyse in zwei S&auml;tzen." },
+        { sel: "#wettbewerb", t: "Ihre Konkurrenz", x: "Alle vier aktiven Wettbewerber &mdash; und zu jedem die passende Gegenstrategie mit Ihren vorhandenen St&auml;rken. Die Tabelle darunter zeigt ehrlich, wo Sie sich abheben und wo Wettbewerber &Auml;hnliches bewerben." },
         { sel: "#honorare", t: "Was ein Gutachten bringt", x: "Die offizielle Honorartabelle (BVSK 2024) &mdash; gerichtlich anerkannt und von uns gegen das Original gepr&uuml;ft. Vorsicht: Viele Internetseiten zeigen hier falsche, zu niedrige Werte &mdash; der rote Kasten erkl&auml;rt das." },
-        { sel: "#economics .calc", t: "Selbst ausprobieren", x: "Der Was-w&auml;re-wenn-Rechner: Regler bewegen und live sehen, was bei anderem Budget oder schlechterer Anrufquote passiert. Probieren Sie ruhig das Schlimmste aus &mdash; die Rechnung h&auml;lt es aus." },
+        { s: 1, sel: "#economics .calc", t: "Selbst ausprobieren", x: "Der Was-w&auml;re-wenn-Rechner: Regler bewegen und live sehen, was bei anderem Budget oder schlechterer Anrufquote passiert. Probieren Sie ruhig das Schlimmste aus &mdash; die Rechnung h&auml;lt es aus." },
         { sel: "#gebote .scenarios", t: "Drei Budget-Setups", x: "Dieselben drei Varianten wie im Angebot, hier mit der strategischen Begr&uuml;ndung dahinter." },
         { sel: "#quellen", t: "Alles belegt", x: "Methodik und Quellen &mdash; jede Zahl ist nachvollziehbar. Gr&uuml;ne Markierung = gegen Prim&auml;rquelle verifiziert." }
       ]
@@ -105,11 +105,11 @@
       ],
       tour: [
         { sel: ".addr-row", t: "Ihr Angebot", x: "Angebots-Nummer und G&uuml;ltigkeit stehen hier &mdash; das Angebot gilt 30 Tage. Alle Preise verstehen sich zzgl. USt." },
-        { sel: ".plans", t: "Drei Varianten auf einen Blick", x: "Der schnelle &Uuml;berblick: Budget, erwartete Auftr&auml;ge, Gesamtkosten. Der Unterschied zwischen den Varianten ist nur das Werbebudget &mdash; unsere Honorare sind &uuml;berall gleich." },
-        { sel: ".matrix", t: "Der Detail-Vergleich", x: "Hier steht Zeile f&uuml;r Zeile, was genau enthalten ist. Die farbige Spalte ist unsere Empfehlung. Tipp am Handy: Die Tabelle l&auml;sst sich seitlich wischen." },
+        { s: 1, sel: ".plans", t: "Drei Varianten auf einen Blick", x: "Der schnelle &Uuml;berblick: Budget, erwartete Auftr&auml;ge, Gesamtkosten. Der Unterschied zwischen den Varianten ist nur das Werbebudget &mdash; unsere Honorare sind &uuml;berall gleich." },
+        { s: 1, sel: ".matrix", t: "Der Detail-Vergleich", x: "Hier steht Zeile f&uuml;r Zeile, was genau enthalten ist. Die farbige Spalte ist unsere Empfehlung. Tipp am Handy: Die Tabelle l&auml;sst sich seitlich wischen." },
         { sel: ".highlight", t: "Die Kernrechnung", x: "Warum sich das tr&auml;gt: rund 90&ndash;150&nbsp;&euro; Kosten pro Auftrag gegen 650&ndash;1.200&nbsp;&euro; Honorar. Die Kampagne refinanziert sich rechnerisch ab dem zweiten Auftrag im Monat." },
         { sel: ".fair", t: "Ihre Absicherung", x: "Monatlich k&uuml;ndbar, das Werbekonto geh&ouml;rt Ihnen, keine Provision auf Ihr Budget, Stopp jederzeit am selben Tag. Das sind Vertragsbestandteile, keine Floskeln." },
-        { sel: ".sign", t: "Beauftragen", x: "Variante ankreuzen und zur&uuml;cksenden &mdash; oder einfach formlos per WhatsApp best&auml;tigen. Mehr braucht es nicht." }
+        { s: 1, sel: ".sign", t: "Beauftragen", x: "Variante ankreuzen und zur&uuml;cksenden &mdash; oder einfach formlos per WhatsApp best&auml;tigen. Mehr braucht es nicht." }
       ]
     },
     datenblaetter: {
@@ -122,11 +122,11 @@
           a: "Blatt 4 sch&auml;tzt f&uuml;r jeden der vier Wettbewerber ein: seine Taktik, sein vermutetes Werbebudget und wie wir dagegen antreten. Ehrlich gekennzeichnet: Die Budget-Angaben sind <b>begr&uuml;ndete Einsch&auml;tzungen</b> (echte Werbeausgaben sind nicht &ouml;ffentlich) &mdash; in den ersten vier Wochen ersetzen wir sie durch echte Auktionsdaten von Google." }
       ],
       tour: [
-        { sel: ".sheet:nth-of-type(1) .s-title-row", t: "Ein Blatt pro Variante", x: "Blatt 1 = Start, Blatt 2 = Wachstum (Empfehlung), Blatt 3 = Marktdominanz, Blatt 4 = Konkurrenz. Alle Varianten-Bl&auml;tter sind gleich aufgebaut &mdash; perfekt zum Nebeneinanderlegen." },
+        { s: 1, sel: ".sheet:nth-of-type(1) .s-title-row", t: "Ein Blatt pro Variante", x: "Blatt 1 = Start, Blatt 2 = Wachstum (Empfehlung), Blatt 3 = Marktdominanz, Blatt 4 = Konkurrenz. Alle Varianten-Bl&auml;tter sind gleich aufgebaut &mdash; perfekt zum Nebeneinanderlegen." },
         { sel: ".sheet:nth-of-type(1) .kpis", t: "Kennzahlen oben", x: "Klicks, Anfragen, Auftr&auml;ge und der erwartete Umsatz &mdash; immer als ehrliche Spanne von vorsichtig bis realistisch." },
         { sel: ".sheet:nth-of-type(1) table", t: "Wohin das Geld flie&szlig;t", x: "Die Budget-Verteilung zeigt auf den Euro genau, welche Kampagne wie viel bekommt und was ein Klick dort maximal kosten darf." },
-        { sel: ".sheet:nth-of-type(1) .twocol", t: "Der ehrlichste Teil", x: "Was dieses Budget kann &mdash; und was nicht: Wir schreiben Ihnen auch die Grenzen hin. Vergleichen Sie diesen Kasten &uuml;ber die drei Bl&auml;tter, dann wissen Sie, welche Variante passt." },
-        { sel: ".sheet:nth-of-type(4) .comp-card", t: "Die Konkurrenz", x: "Blatt 4: pro Wettbewerber eine Karte mit Einstufung, Taktik und unserer Antwort. Darunter sechs konkrete Regeln, wie wir Ihr Budget gegen dieses Feld einsetzen." }
+        { s: 1, sel: ".sheet:nth-of-type(1) .twocol", t: "Der ehrlichste Teil", x: "Was dieses Budget kann &mdash; und was nicht: Wir schreiben Ihnen auch die Grenzen hin. Vergleichen Sie diesen Kasten &uuml;ber die drei Bl&auml;tter, dann wissen Sie, welche Variante passt." },
+        { s: 1, sel: ".sheet:nth-of-type(4) .comp-card", t: "Die Konkurrenz", x: "Blatt 4: pro Wettbewerber eine Karte mit Einstufung, Taktik und unserer Antwort. Darunter sechs konkrete Regeln, wie wir Ihr Budget gegen dieses Feld einsetzen." }
       ]
     },
     landingpage: {
@@ -144,12 +144,12 @@
       ],
       tour: [
         { sel: ".top-call", t: "Anruf &mdash; immer erreichbar", x: "Die Nummer klebt oben und scrollt mit. Der gr&uuml;ne Punkt signalisiert: jetzt erreichbar &mdash; Ihr 24/7-Vorteil, prominent verpackt." },
-        { sel: ".h-cta", t: "Die zwei Wege zu Ihnen", x: "Anrufen oder Fotos per WhatsApp &mdash; mehr Auswahl gibt es bewusst nicht. Auf dem Handy klebt zus&auml;tzlich eine Leiste mit beiden Buttons am unteren Rand." },
-        { sel: ".usp", t: "Ihr Alleinstellungsmerkmal", x: "Abschleppen, Gutachten in 24h, Mietwagen, komplette Abwicklung &mdash; das Paket hat lokal niemand sonst. Deshalb steht es direkt unter dem ersten Eindruck." },
-        { sel: "#kosten .pay-card", t: "Rechtssicher statt abmahnbar", x: "Der Kasten &bdquo;Ehrlich gesagt&ldquo;: Bagatellgrenze und Teilschuld werden offen erkl&auml;rt. Das sch&uuml;tzt Sie vor Abmahnungen &mdash; und wirkt auf Kunden vertrauensw&uuml;rdiger als ein plattes Gratis-Versprechen." },
+        { s: 1, sel: ".h-cta", t: "Die zwei Wege zu Ihnen", x: "Anrufen oder Fotos per WhatsApp &mdash; mehr Auswahl gibt es bewusst nicht. Auf dem Handy klebt zus&auml;tzlich eine Leiste mit beiden Buttons am unteren Rand." },
+        { sel: ".usp", t: "Ihr st&auml;rkstes Argument", x: "Abschleppen, Gutachten in 24h, Mietwagen, komplette Abwicklung &mdash; und zwar aus Ihrem <b>eigenen Haus</b>, nicht &uuml;ber Vermittler wie bei den Wettbewerbern. Genau so formulieren wir es: ehrlich und abmahnsicher." },
+        { s: 1, sel: "#kosten .pay-card", t: "Rechtssicher statt abmahnbar", x: "Der Kasten &bdquo;Ehrlich gesagt&ldquo;: Bagatellgrenze und Teilschuld werden offen erkl&auml;rt. Das sch&uuml;tzt Sie vor Abmahnungen &mdash; und wirkt auf Kunden vertrauensw&uuml;rdiger als ein plattes Gratis-Versprechen." },
         { sel: "#checkliste .cl-grid", t: "N&uuml;tzlich sein gewinnt", x: "Die Unfall-Checkliste hilft dem Besucher sofort &mdash; und Schritt 5 ist der Anruf bei Ihnen. Google belohnt so etwas mit g&uuml;nstigeren Klickpreisen." },
         { sel: "#bewertungen .g-badge", t: "Ihre 4,9 Sterne", x: "Die Beispiel-Bewertungen ersetzen wir durch Ihre echten Google-Rezensionen &mdash; daf&uuml;r brauchen wir nur den Link zu Ihrem Google-Profil." },
-        { sel: ".form", t: "Der dritte Weg", x: "F&uuml;r die, die nicht telefonieren wollen: nur vier Felder, mehr kostet nachweislich Anfragen. Wird vor Livegang an Ihre E-Mail angeschlossen." }
+        { s: 1, sel: ".form", t: "Der dritte Weg", x: "F&uuml;r die, die nicht telefonieren wollen: nur vier Felder, mehr kostet nachweislich Anfragen. Wird vor Livegang an Ihre E-Mail angeschlossen." }
       ]
     }
   };
@@ -195,11 +195,32 @@
     + ".kga-card .kga-nav button{font:700 13px 'Segoe UI',system-ui,sans-serif;border-radius:9px;padding:8px 15px;cursor:pointer;border:1.5px solid #DFE5EA;background:#fff;color:#4E5B67}"
     + ".kga-card .kga-nav button.kga-next{background:#0C6570;border-color:#0C6570;color:#fff;margin-left:auto}"
     + ".kga-card .kga-skip{background:none!important;border:none!important;color:#7F8B97!important;padding:8px 4px!important;font-weight:600!important}"
-    + "@media(prefers-reduced-motion:reduce){.kga-ring,.kga-btn{transition:none}}";
+    + ".kga-card.kga-center{top:50%!important;left:50%!important;bottom:auto!important;right:auto;transform:translate(-50%,-50%)}"
+    + "@media(max-width:600px){.kga-card.kga-center{left:50%!important;right:auto;width:min(340px,calc(100vw - 28px))}}"
+    + ".kga-card .kga-choice{display:flex;flex-direction:column;gap:9px;margin-bottom:4px}"
+    + ".kga-card .kga-choice button,.kga-card .kga-choice a{display:block;width:100%;text-align:left;font:700 13.5px 'Segoe UI',system-ui,sans-serif;border-radius:10px;padding:11px 15px;cursor:pointer;border:1.5px solid #DFE5EA;background:#fff;color:#1A222C;text-decoration:none}"
+    + ".kga-card .kga-choice button small,.kga-card .kga-choice a small{display:block;font-weight:500;font-size:11.5px;color:#7F8B97;margin-top:1px}"
+    + ".kga-card .kga-choice .kga-prim{background:#0C6570;border-color:#0C6570;color:#fff}"
+    + ".kga-card .kga-choice .kga-prim small{color:#B8DCDF}"
+    + ".kga-dim{position:fixed;inset:0;z-index:99978;background:rgba(10,18,26,.6)}"
+    + ".kga-home{position:fixed;top:14px;left:14px;z-index:99970;display:inline-flex;align-items:center;gap:7px;background:rgba(15,23,32,.88);color:#EDF1F4;border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:8px 16px;font:650 12.5px 'Segoe UI',system-ui,sans-serif;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:transform .15s ease}"
+    + ".kga-home:hover{transform:translateY(-1px);background:rgba(15,23,32,.98)}"
+    + "body.kga-lp .kga-home{top:72px}"
+    + "@media(prefers-reduced-motion:reduce){.kga-ring,.kga-btn,.kga-home{transition:none}}";
   var st = document.createElement("style");
   st.textContent = css;
   document.head.appendChild(st);
   if (PAGE === "landingpage") document.body.classList.add("kga-lp");
+
+  /* Zurück zur Übersicht — auf allen Unterseiten, jederzeit sichtbar */
+  if (PAGE !== "index") {
+    var home = document.createElement("a");
+    home.className = "kga-home";
+    home.href = "index.html#dokumente";
+    home.innerHTML = "&larr; Zur &Uuml;bersicht";
+    home.setAttribute("aria-label", "Zurück zur Portal-Startseite, Abschnitt Unterlagen");
+    document.body.appendChild(home);
+  }
 
   /* ---------------- Assistent-Widget ---------------- */
   function el(tag, cls, html) { var e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; }
@@ -276,17 +297,35 @@
   function tourDone() { try { return localStorage.getItem(TKEY) === "1"; } catch (e) { return true; } }
   function setDone() { try { localStorage.setItem(TKEY, "1"); } catch (e) {} }
 
-  var ring = null, card = null, steps = [], idx = 0;
+  var ring = null, card = null, dim = null, steps = [], idx = 0;
 
   function visible(e) {
     if (!e) return false;
     var r = e.getBoundingClientRect();
     return r.width > 0 && r.height > 0;
   }
-  function endTour() {
-    setDone();
+  function cleanup() {
     if (ring) { ring.remove(); ring = null; }
     if (card) { card.remove(); card = null; }
+    if (dim) { dim.remove(); dim = null; }
+  }
+  function endTour() { setDone(); cleanup(); }
+  function finishTour() {
+    setDone();
+    if (ring) { ring.remove(); ring = null; }
+    if (PAGE === "index") { cleanup(); openPanel(); return; }
+    /* Unterseiten: End-Karte mit Rücksprung zur Übersicht */
+    if (!dim) { dim = el("div", "kga-dim"); document.body.appendChild(dim); }
+    card.classList.add("kga-center");
+    card.innerHTML =
+      "<div class='kga-step'>Rundgang beendet</div>" +
+      "<b class='kga-t'>Das war's auf dieser Seite.</b>" +
+      "<p>Fragen beantworte ich Ihnen jederzeit &uuml;ber den Assistent-Button unten rechts.</p>" +
+      "<div class='kga-choice'>" +
+      "<a class='kga-prim' href='index.html#dokumente'>&larr; Zur&uuml;ck zur &Uuml;bersicht<small>zu Ihren Unterlagen auf der Startseite</small></a>" +
+      "<button class='kga-stay'>Auf dieser Seite bleiben<small>in Ruhe weiterlesen</small></button>" +
+      "</div>";
+    card.querySelector(".kga-stay").onclick = cleanup;
   }
   function place() {
     if (!ring || !card) return;
@@ -318,26 +357,57 @@
   function next(d) {
     idx += d;
     if (idx < 0) idx = 0;
-    if (idx >= steps.length) { endTour(); openPanel(); return; }
+    if (idx >= steps.length) { finishTour(); return; }
+    show();
+  }
+  function buildTourUi() {
+    ring = el("div", "kga-ring");
+    card = el("div", "kga-card");
+    document.body.appendChild(ring); document.body.appendChild(card);
+    window.addEventListener("resize", function () { if (ring && steps.length) place(); });
+  }
+  function stepUi() {
+    card.classList.remove("kga-center");
+    card.innerHTML = "<div class='kga-step'></div><b class='kga-t'></b><p></p>" +
+      "<div class='kga-nav'><button class='kga-back'>← Zurück</button><button class='kga-skip'>Überspringen</button><button class='kga-next'>Weiter →</button></div>";
+    card.querySelector(".kga-back").onclick = function () { next(-1); };
+    card.querySelector(".kga-next").onclick = function () { next(1); };
+    card.querySelector(".kga-skip").onclick = endTour;
+  }
+  function beginTour(mode) {
+    var all = (cfg.tour || []).filter(function (s) { return visible(document.querySelector(s.sel)); });
+    steps = (mode === "short") ? all.filter(function (s) { return s.s === 1; }) : all;
+    if (!steps.length) steps = all;
+    if (!steps.length) { cleanup(); return; }
+    idx = 0;
+    if (dim) { dim.remove(); dim = null; }
+    stepUi();
     show();
   }
   function startTour(force) {
     if (!force && tourDone()) return;
-    steps = (cfg.tour || []).filter(function (s) { return visible(document.querySelector(s.sel)); });
-    if (!steps.length) return;
-    idx = 0;
-    if (!ring) {
-      ring = el("div", "kga-ring");
-      card = el("div", "kga-card");
-      card.innerHTML = "<div class='kga-step'></div><b class='kga-t'></b><p></p>" +
-        "<div class='kga-nav'><button class='kga-back'>← Zurück</button><button class='kga-skip'>Überspringen</button><button class='kga-next'>Weiter →</button></div>";
-      document.body.appendChild(ring); document.body.appendChild(card);
-      card.querySelector(".kga-back").onclick = function () { next(-1); };
-      card.querySelector(".kga-next").onclick = function () { next(1); };
+    if (!ring) buildTourUi();
+    /* Unterseiten: erst fragen, wie viel Zeit da ist */
+    if (PAGE !== "index") {
+      var full = (cfg.tour || []).filter(function (s) { return visible(document.querySelector(s.sel)); }).length;
+      var kurz = (cfg.tour || []).filter(function (s) { return s.s === 1 && visible(document.querySelector(s.sel)); }).length;
+      if (!dim) { dim = el("div", "kga-dim"); document.body.appendChild(dim); }
+      card.classList.add("kga-center");
+      card.innerHTML =
+        "<div class='kga-step'>Kurzer Rundgang?</div>" +
+        "<b class='kga-t'>Wie viel Zeit haben Sie gerade?</b>" +
+        "<p>Ich zeige Ihnen, was auf dieser Seite wichtig ist &mdash; Sie entscheiden das Tempo.</p>" +
+        "<div class='kga-choice'>" +
+        "<button class='kga-prim kga-c-short'>&#9201; Wenig Zeit &mdash; nur das Wichtigste<small>" + kurz + " Stopps, ca. 30 Sekunden</small></button>" +
+        "<button class='kga-c-full'>In Ruhe ansehen &mdash; kompletter Rundgang<small>" + full + " Stopps, ca. 2 Minuten</small></button>" +
+        "</div>" +
+        "<div class='kga-nav'><button class='kga-skip'>Jetzt nicht</button></div>";
+      card.querySelector(".kga-c-short").onclick = function () { beginTour("short"); };
+      card.querySelector(".kga-c-full").onclick = function () { beginTour("full"); };
       card.querySelector(".kga-skip").onclick = endTour;
-      window.addEventListener("resize", function () { if (ring) place(); });
+      return;
     }
-    show();
+    beginTour("full");
   }
 
   /* Autostart: einmalig pro Seite */
