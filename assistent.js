@@ -97,7 +97,7 @@
       chips: ["Welche Variante passt zu mir?", "Wie beauftrage ich?", "Kann ich jederzeit kündigen?", "Was heißt CPL und CPA?"],
       qa: [
         { k: ["beauftrag", "bestell", "unterschreib", "annehmen", "zusage"], chip: null,
-          a: "Ganz unkompliziert: Im PDF die gew&uuml;nschte Variante <b>ankreuzen und zur&uuml;cksenden</b> &mdash; oder einfach formlos per WhatsApp/Anruf best&auml;tigen. Das gen&uuml;gt. Danach melden wir uns am selben Tag mit den ersten Schritten." },
+          a: "Ganz unkompliziert &mdash; drei Wege: <b>1.</b> Unten auf dieser Seite die Variante anklicken &mdash; das &ouml;ffnet WhatsApp mit der fertigen Best&auml;tigung an uns. <b>2.</b> Anrufen: <a href='tel:+4915140322125'>+49 151 40322125</a>. <b>3.</b> Klassisch: das <a href='pdf/Angebot.pdf'>PDF herunterladen</a>, Variante ankreuzen, unterschreiben und zur&uuml;cksenden. Danach melden wir uns am selben Tag mit den ersten Schritten." },
         { k: ["cpl und cpa", "cpl cpa", "abkurzung", "begriffe", "heisst cpl"], chip: null,
           a: "<b>CPL</b> = Kosten pro Anfrage (ein Anruf oder eine WhatsApp): erwartet 42&ndash;63&nbsp;&euro;. <b>CPA</b> = Kosten pro gewonnenem Auftrag inklusive unserer Betreuung: erwartet 90&ndash;150&nbsp;&euro;. Zum Vergleich: Ein Auftrag bringt Ihnen laut BVSK 650&ndash;1.200&nbsp;&euro; Honorar." },
         { k: ["matrix", "tabelle", "vergleich", "detail"], chip: null,
@@ -109,7 +109,7 @@
         { s: 1, sel: ".matrix", t: "Der Detail-Vergleich", x: "Hier steht Zeile f&uuml;r Zeile, was genau enthalten ist. Die farbige Spalte ist unsere Empfehlung. Tipp am Handy: Die Tabelle l&auml;sst sich seitlich wischen." },
         { sel: ".highlight", t: "Die Kernrechnung", x: "Warum sich das tr&auml;gt: rund 90&ndash;150&nbsp;&euro; Kosten pro Auftrag gegen 650&ndash;1.200&nbsp;&euro; Honorar. Die Kampagne refinanziert sich rechnerisch ab dem zweiten Auftrag im Monat." },
         { sel: ".fair", t: "Ihre Absicherung", x: "Monatlich k&uuml;ndbar, das Werbekonto geh&ouml;rt Ihnen, keine Provision auf Ihr Budget, Stopp jederzeit am selben Tag. Das sind Vertragsbestandteile, keine Floskeln." },
-        { s: 1, sel: ".sign", t: "Beauftragen", x: "Variante ankreuzen und zur&uuml;cksenden &mdash; oder einfach formlos per WhatsApp best&auml;tigen. Mehr braucht es nicht." }
+        { s: 1, sel: "#beauftragen", t: "Beauftragen — ein Klick", x: "Variante anklicken &mdash; WhatsApp &ouml;ffnet sich mit der fertigen Best&auml;tigung an uns, die Sie vor dem Absenden noch anpassen k&ouml;nnen. Lieber klassisch? PDF herunterladen, ankreuzen, unterschreiben." }
       ]
     },
     datenblaetter: {

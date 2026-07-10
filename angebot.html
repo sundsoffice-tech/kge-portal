@@ -98,8 +98,41 @@
   h2, .plans, .highlight, .sign { break-inside: avoid; }
   tr { break-inside: avoid; }
 
+  /* ---------- Medien-Weiche: Web-Elemente vs. PDF-Elemente ---------- */
+  .web-only, .web-inline { display: none; }
+  @media screen {
+    .web-only { display: revert; }
+    .web-inline { display: inline; }
+    .pdf-only, .pdf-inline { display: none !important; }
+  }
+  @media print {
+    .web-only, .web-inline { display: none !important; }
+  }
+
   /* ---------- Web-Ansicht: Karten-Layout (PDF/Print unberührt) ---------- */
   @media screen {
+    /* Header-Aktionen */
+    .head-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .head-actions a { display: inline-flex; align-items: center; gap: 8px; border-radius: 100px; padding: 10px 20px; font-size: 13.5px; font-weight: 700; text-decoration: none; transition: transform .15s ease; }
+    .head-actions a:hover { transform: translateY(-2px); }
+    .head-actions .ha-pdf { background: var(--cover-accent); color: var(--cover); }
+    .head-actions .ha-ma { background: rgba(255,255,255,0.08); color: var(--cover-ink); border: 1px solid rgba(255,255,255,0.2); }
+    /* Interaktive Beauftragung */
+    .order { background: linear-gradient(140deg, #13293C, var(--cover) 60%); color: var(--cover-ink); border-radius: 18px; padding: 30px 32px 26px; margin: 40px 0 10px; box-shadow: 0 20px 50px rgba(15,23,32,0.25); position: relative; overflow: hidden; }
+    .order::before { content: ""; position: absolute; right: -100px; top: -120px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(111,196,204,0.15), transparent 65%); }
+    .order > * { position: relative; }
+    .order .o-t { font-family: Cambria, Georgia, serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+    .order .o-s { font-size: 13.5px; color: var(--cover-ink2); margin-bottom: 18px; max-width: 62ch; }
+    .order-btns { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    @media (max-width: 720px) { .order-btns { grid-template-columns: 1fr; } }
+    .order-btns a { display: block; background: rgba(255,255,255,0.06); border: 1.5px solid rgba(255,255,255,0.18); border-radius: 13px; padding: 15px 17px; text-decoration: none; color: var(--cover-ink); transition: all .15s ease; }
+    .order-btns a:hover { border-color: var(--cover-accent); background: rgba(111,196,204,0.1); transform: translateY(-2px); }
+    .order-btns a.reco { border-color: var(--cover-accent); background: rgba(111,196,204,0.12); }
+    .order-btns b { display: block; font-size: 15.5px; }
+    .order-btns small { display: block; font-size: 11.5px; color: var(--cover-ink2); margin-top: 3px; }
+    .order-btns .ob-cta { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 750; color: var(--cover-accent); }
+    .order-alt { font-size: 12.5px; color: var(--cover-ink2); }
+    .order-alt a { color: var(--cover-accent); font-weight: 700; text-decoration: none; }
     body { background: #EEF2F4; font-size: 14px; }
     .head { padding: 52px 46px 46px; position: relative; overflow: hidden; }
     .head::after { content: ""; position: absolute; right: -140px; top: -140px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(111,196,204,0.14), transparent 65%); }
@@ -164,6 +197,10 @@
   </div>
   <h1>Angebot: Google Ads Lead-Generierung</h1>
   <p class="h-sub">Umsetzung der Marktanalyse „KFZ-Gutachten Mönchengladbach" in drei Varianten. Unsere Honorare sind in allen Varianten identisch — Sie wählen nur, wie viel Werbebudget in den Markt geht.</p>
+  <div class="head-actions web-only">
+    <a class="ha-pdf" href="pdf/Angebot.pdf">⤓ Als PDF herunterladen — zum Ausdrucken &amp; Unterschreiben</a>
+    <a class="ha-ma" href="marktanalyse.html">Zur Marktanalyse →</a>
+  </div>
 </div>
 
 <div class="page">
@@ -189,7 +226,7 @@
 </div>
 
 <p>Sehr geehrte Damen und Herren,</p>
-<p>auf Basis der beigefügten Marktanalyse bieten wir Ihnen die Einrichtung und laufende Betreuung Ihrer Google-Ads-Lead-Generierung an — in drei Varianten, die sich <b>ausschließlich im Werbebudget</b> unterscheiden. Wir arbeiten mit KI-gestützten Prozessen; der Effizienzvorteil steckt direkt in unseren Preisen: schlanke Pauschalen statt prozentualer Agentur-Provision, keine Laufzeitbindung.</p>
+<p>auf Basis der <span class="pdf-inline">beigefügten Marktanalyse</span><a class="web-inline" href="marktanalyse.html" style="color:var(--accent-ink);font-weight:650">Marktanalyse</a> bieten wir Ihnen die Einrichtung und laufende Betreuung Ihrer Google-Ads-Lead-Generierung an — in drei Varianten, die sich <b>ausschließlich im Werbebudget</b> unterscheiden. Wir arbeiten mit KI-gestützten Prozessen; der Effizienzvorteil steckt direkt in unseren Preisen: schlanke Pauschalen statt prozentualer Agentur-Provision, keine Laufzeitbindung.</p>
 
 <h2>Drei Varianten — Ihr Werbebudget entscheidet</h2>
 <div class="plans">
@@ -284,7 +321,7 @@
   <tr><td>Empfohlen bei freier Kapazität von …</td><td class="c">bis ~12 Aufträgen/Mon.</td><td class="c rc">bis ~18 Aufträgen/Mon.</td><td class="c">24+ Aufträgen/Mon.</td></tr>
 </table>
 </div>
-<p class="tbl-note">★ = Empfehlung der Marktanalyse. Details je Variante (Budget-Logik, Grenzen, Risiken) im beiliegenden Datenblatt-Set — pro Variante ein Blatt.</p>
+<p class="tbl-note">★ = Empfehlung der Marktanalyse. Details je Variante (Budget-Logik, Grenzen, Risiken) <span class="pdf-inline">im beiliegenden Datenblatt-Set</span><a class="web-inline" href="datenblaetter.html" style="color:var(--accent-ink);font-weight:650">in den Datenblättern</a> — pro Variante ein Blatt.</p>
 
 <div class="highlight">
   <b>Zur Einordnung:</b> Jedem gewonnenen Auftrag steht laut BVSK-Honorarbefragung 2024 ein Honorar von <b>650–1.200 € netto</b> gegenüber. In allen drei Varianten liegen die Gesamtkosten pro Auftrag bei rund 90–150 € — die Kampagne refinanziert sich rechnerisch ab dem zweiten gewonnenen Auftrag im Monat.
@@ -341,12 +378,33 @@
 <h2>Ablauf nach Beauftragung</h2>
 <p><b>Woche 1–2:</b> Setup komplett (Pos. 1, ggf. 2) — Sie geben Anzeigentexte und Landingpage frei, bevor etwas live geht. <b>Woche 3–6:</b> Testphase mit manueller Steuerung. <b>Ab Woche 7:</b> Optimierung anhand echter Daten, danach Umstellung auf automatisiertes Bieten. Details im 12-Wochen-Plan der Marktanalyse.</p>
 
+<!-- Web: interaktive Beauftragung -->
+<div class="order web-only" id="beauftragen">
+  <div class="o-t">Variante wählen — direkt von hier</div>
+  <div class="o-s">Ein Klick öffnet WhatsApp mit der fertigen Bestätigung an uns — Sie können den Text vor dem Absenden noch anpassen (z.&nbsp;B. Landingpage ja/nein).</div>
+  <div class="order-btns">
+    <a href="https://wa.me/4915140322125?text=Hallo%20S%26S%20Connect%2C%20wir%20nehmen%20zu%20Angebot%202026-KGE-01%20die%20Variante%20START%20(1.000%20%E2%82%AC%20Werbebudget%2FMonat)%2C%20Landingpage%3A%20ja.%20%E2%80%94%20Kfz%20Gutachter%20Es" rel="noopener">
+      <b>Start</b><small>1.000 € Werbebudget · ab Folgemonat 1.190 € gesamt</small><span class="ob-cta">Per WhatsApp bestätigen →</span>
+    </a>
+    <a class="reco" href="https://wa.me/4915140322125?text=Hallo%20S%26S%20Connect%2C%20wir%20nehmen%20zu%20Angebot%202026-KGE-01%20die%20Variante%20WACHSTUM%20(1.500%20%E2%82%AC%20Werbebudget%2FMonat)%2C%20Landingpage%3A%20ja.%20%E2%80%94%20Kfz%20Gutachter%20Es" rel="noopener">
+      <b>Wachstum ★</b><small>1.500 € Werbebudget · ab Folgemonat 1.690 € gesamt · Empfehlung</small><span class="ob-cta">Per WhatsApp bestätigen →</span>
+    </a>
+    <a href="https://wa.me/4915140322125?text=Hallo%20S%26S%20Connect%2C%20wir%20nehmen%20zu%20Angebot%202026-KGE-01%20die%20Variante%20MARKTDOMINANZ%20(3.000%20%E2%82%AC%20Werbebudget%2FMonat)%2C%20Landingpage%3A%20ja.%20%E2%80%94%20Kfz%20Gutachter%20Es" rel="noopener">
+      <b>Marktdominanz</b><small>3.000 € Werbebudget · ab Folgemonat 3.190 € gesamt</small><span class="ob-cta">Per WhatsApp bestätigen →</span>
+    </a>
+  </div>
+  <div class="order-alt">Lieber klassisch? <a href="tel:+4915140322125">📞 +49 151 40322125</a> anrufen — oder das <a href="pdf/Angebot.pdf">PDF herunterladen</a>, Variante ankreuzen und unterschrieben zurücksenden. Noch unsicher? Die <a href="datenblaetter.html">Datenblätter</a> vergleichen die Varianten im Detail.</div>
+</div>
+
+<!-- PDF: Ankreuz-Zeile + Unterschriften -->
+<div class="pdf-only">
 <p style="margin-top:18px">Zur Beauftragung genügt die Rückgabe dieser Seite mit angekreuzter Variante — oder eine formlose Bestätigung per E-Mail oder WhatsApp.</p>
 <p style="font-size:12.5px"><b>Gewählte Variante:</b>&nbsp;&nbsp; ☐ Start (1.000 €) &nbsp;&nbsp; ☐ Wachstum (1.500 €) &nbsp;&nbsp; ☐ Marktdominanz (3.000 €) &nbsp;&nbsp;|&nbsp;&nbsp; Landingpage (Pos. 2): &nbsp; ☐ ja &nbsp; ☐ nein</p>
 
 <div class="sign">
   <div class="s-box"><div class="s-line">Ort, Datum · S&amp;S Connect GbR</div></div>
   <div class="s-box"><div class="s-line">Ort, Datum · Auftraggeber (Kfz Gutachter Es)</div></div>
+</div>
 </div>
 
 <div class="foot">
