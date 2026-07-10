@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<title>Projekt-Portal · Kfz Gutachter Es × S&S Connect</title>
+<style>
+  :root {
+    --paper: #F7F9FA;
+    --card: #FFFFFF;
+    --ink: #1A222C;
+    --ink2: #4E5B67;
+    --ink3: #7F8B97;
+    --line: #E1E7EB;
+    --teal: #0C6570;
+    --teal-ink: #0A5560;
+    --teal-soft: #E1EFF0;
+    --amber: #E8A13D;
+    --amber-ink: #7A5202;
+    --amber-soft: #F9EFDC;
+    --navy: #0F1720;
+    --navy2: #15222E;
+    --navy-ink: #EDF1F4;
+    --navy-ink2: #93A3B1;
+    --navy-line: #24313D;
+    --teal-bright: #6FC4CC;
+    --r: 14px;
+    --shadow: 0 1px 3px rgba(15,23,32,0.06), 0 6px 20px rgba(15,23,32,0.06);
+    --shadow-lg: 0 20px 50px rgba(15,23,32,0.22);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body { background: var(--paper); color: var(--ink); font-family: "Segoe UI", system-ui, -apple-system, sans-serif; font-size: 15.5px; line-height: 1.62; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+  a { color: var(--teal); }
+
+  .ic { width: 1em; height: 1em; flex: none; display: inline-block; vertical-align: -0.12em; }
+
+  /* ---------- Hero ---------- */
+  .hero { background: linear-gradient(150deg, var(--navy2), var(--navy) 60%); color: var(--navy-ink); padding: 54px 24px 120px; border-top: 4px solid var(--teal-bright); position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; right: -160px; top: -160px; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(111,196,204,0.13), transparent 65%); }
+  .hero .wrap { position: relative; }
+  .brandbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 52px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 11px; }
+  .b-mark { width: 38px; height: 38px; border-radius: 9px; background: var(--teal-bright); color: var(--navy); display: flex; align-items: center; justify-content: center; flex: none; }
+  .b-name { font-weight: 750; font-size: 15px; }
+  .b-claim { font-size: 10.5px; color: var(--navy-ink2); display: block; letter-spacing: 0.04em; }
+  .brand-for { font-size: 12.5px; color: var(--navy-ink2); text-align: right; }
+  .brand-for b { color: var(--navy-ink); display: block; font-size: 13.5px; }
+  .hero .eyebrow { color: var(--teal-bright); font-size: 12px; font-weight: 750; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px; }
+  .hero h1 { font-family: Cambria, Georgia, serif; font-size: clamp(30px, 4.6vw, 46px); font-weight: 700; line-height: 1.1; letter-spacing: -0.015em; max-width: 24ch; text-wrap: balance; margin-bottom: 16px; }
+  .hero h1 em { font-style: italic; color: var(--teal-bright); }
+  .hero .sub { color: var(--navy-ink2); font-size: 17px; max-width: 62ch; }
+
+  /* ---------- KPI strip ---------- */
+  .kpis { max-width: 1040px; margin: -70px auto 0; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 13px; position: relative; z-index: 2; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px 13px; box-shadow: var(--shadow); }
+  .kpi .k-l { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink2); font-weight: 700; }
+  .kpi .k-v { font-family: Cambria, Georgia, serif; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .kpi.hl .k-v { color: var(--teal-ink); }
+  .kpi .k-s { font-size: 11.5px; color: var(--ink3); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 66px 0 8px; }
+  .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--teal-ink); font-size: 12px; font-weight: 780; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .eyebrow::before { content: ""; width: 24px; height: 3px; border-radius: 2px; background: var(--teal); }
+  h2 { font-family: Cambria, Georgia, serif; font-size: clamp(24px, 3.2vw, 31px); font-weight: 700; letter-spacing: -0.012em; line-height: 1.15; margin-bottom: 12px; text-wrap: balance; }
+  .sec-sub { color: var(--ink2); max-width: 66ch; margin-bottom: 30px; font-size: 16px; }
+
+  /* Timeline */
+  .timeline { border-left: 2px solid var(--line); margin-left: 8px; padding-left: 28px; max-width: 720px; }
+  .t-step { position: relative; padding-bottom: 26px; }
+  .t-step:last-child { padding-bottom: 4px; }
+  .t-step::before { content: ""; position: absolute; left: -35px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--teal); border: 2.5px solid var(--paper); }
+  .t-step.now::before { background: var(--amber); box-shadow: 0 0 0 4px var(--amber-soft); }
+  .t-when { font-size: 11px; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 780; color: var(--teal-ink); }
+  .t-step.now .t-when { color: var(--amber-ink); }
+  .t-what { font-weight: 700; font-size: 16px; margin: 2px 0 4px; }
+  .t-det { font-size: 14px; color: var(--ink2); max-width: 62ch; }
+  .now-chip { display: inline-block; background: var(--amber-soft); color: var(--amber-ink); font-size: 10.5px; font-weight: 780; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 10px; border-radius: 100px; margin-left: 8px; vertical-align: 2px; }
+
+  /* Docs */
+  .docs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 800px) { .docs { grid-template-columns: 1fr; } }
+  .doc { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 24px 24px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .doc .d-head { display: flex; align-items: center; gap: 13px; margin-bottom: 12px; }
+  .doc .d-ic { width: 44px; height: 44px; border-radius: 11px; background: var(--navy); color: var(--teal-bright); display: flex; align-items: center; justify-content: center; font-size: 20px; flex: none; }
+  .doc .d-head b { font-size: 16.5px; font-weight: 750; display: block; letter-spacing: -0.01em; }
+  .doc .d-head small { font-size: 11.5px; color: var(--ink3); font-weight: 600; }
+  .doc p { font-size: 13.5px; color: var(--ink2); margin-bottom: 12px; }
+  .doc .d-read { background: var(--teal-soft); border-radius: 9px; padding: 10px 14px; font-size: 12.5px; color: var(--teal-ink); margin-bottom: 16px; }
+  .doc .d-read b { font-weight: 750; }
+  .doc .d-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--navy); color: #fff; font-size: 13.5px; font-weight: 700; padding: 10px 18px; border-radius: 10px; text-decoration: none; transition: background 0.15s ease, transform 0.15s ease; }
+  .doc .d-cta:hover { background: var(--navy2); transform: translateY(-1px); }
+  .doc .d-cta.ghost { background: transparent; color: var(--teal-ink); border: 1.5px solid var(--line); }
+  .doc .d-cta.ghost:hover { background: var(--teal-soft); }
+  .doc .d-note { font-size: 11px; color: var(--ink3); margin-top: 10px; }
+
+  /* Varianten */
+  .plans { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  @media (max-width: 860px) { .plans { grid-template-columns: 1fr; } }
+  .plan { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 20px 18px; position: relative; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .plan.reco { border: 2px solid var(--teal); }
+  .plan.reco::before { content: "Unsere Empfehlung"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--teal); color: #fff; font-size: 9.5px; font-weight: 780; letter-spacing: 0.07em; text-transform: uppercase; padding: 2.5px 11px; border-radius: 100px; white-space: nowrap; }
+  .plan .p-name { font-family: Cambria, Georgia, serif; font-size: 18px; font-weight: 700; }
+  .plan .p-for { font-size: 11.5px; color: var(--ink3); margin: 2px 0 12px; min-height: 30px; }
+  .plan .p-budget { font-size: 23px; font-weight: 750; font-variant-numeric: tabular-nums; color: var(--teal-ink); font-family: Cambria, Georgia, serif; }
+  .plan .p-budget span { font-size: 11px; color: var(--ink3); font-family: "Segoe UI", system-ui, sans-serif; font-weight: 600; }
+  .plan ul { list-style: none; padding: 0; margin: 12px 0 14px; }
+  .plan ul li { position: relative; padding-left: 22px; font-size: 12.5px; color: var(--ink2); margin-bottom: 6px; }
+  .plan ul li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+  .plan .p-tot { border-top: 1px solid var(--line); margin-top: auto; padding-top: 10px; font-size: 12px; line-height: 1.7; color: var(--ink2); }
+  .plan .p-tot b { color: var(--ink); font-variant-numeric: tabular-nums; }
+  .plan .p-tot .big { color: var(--teal-ink); font-size: 15px; font-weight: 750; }
+
+  /* Checklist "was wir brauchen" */
+  .need { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden; max-width: 760px; }
+  .need .n-row { display: flex; gap: 16px; padding: 18px 22px; border-bottom: 1px solid var(--line); align-items: flex-start; }
+  .need .n-row:last-child { border-bottom: none; }
+  .need .n-num { width: 28px; height: 28px; border-radius: 50%; background: var(--teal-soft); color: var(--teal-ink); font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; flex: none; margin-top: 2px; }
+  .need b { font-size: 14.5px; font-weight: 750; display: block; }
+  .need small { font-size: 13px; color: var(--ink2); }
+  .tag-min { display: inline-block; background: var(--amber-soft); color: var(--amber-ink); font-size: 10.5px; font-weight: 750; padding: 1.5px 9px; border-radius: 100px; margin-left: 7px; vertical-align: 1px; }
+
+  /* FAQ */
+  details.faq { border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; background: var(--card); box-shadow: var(--shadow); max-width: 860px; }
+  details.faq summary { cursor: pointer; list-style: none; padding: 16px 20px; font-weight: 720; font-size: 15px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq summary::after { content: "+"; font-size: 21px; font-weight: 300; color: var(--ink3); line-height: 1; }
+  details.faq[open] summary::after { content: "–"; }
+  details.faq .faq-a { padding: 0 20px 17px; font-size: 14px; color: var(--ink2); max-width: 78ch; }
+
+  /* Kontakt card */
+  .contact-card { background: linear-gradient(140deg, var(--navy2), var(--navy) 65%); color: var(--navy-ink); border-radius: 18px; padding: 32px 34px; margin: 60px 0 70px; display: flex; flex-wrap: wrap; gap: 26px 50px; align-items: center; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; }
+  .contact-card::before { content: ""; position: absolute; right: -80px; bottom: -120px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(111,196,204,0.12), transparent 65%); }
+  .contact-card .cc-brand { display: flex; align-items: center; gap: 13px; position: relative; }
+  .contact-card .cc-brand .b-mark { width: 46px; height: 46px; border-radius: 11px; }
+  .contact-card .ccb-name { font-family: Cambria, Georgia, serif; font-weight: 700; font-size: 20px; }
+  .contact-card .ccb-sub { font-size: 12px; color: var(--navy-ink2); }
+  .contact-card .cc-data { font-size: 14px; line-height: 1.8; color: var(--navy-ink2); position: relative; }
+  .contact-card .cc-data b { color: var(--navy-ink); font-weight: 700; }
+  .contact-card a { color: var(--teal-bright); text-decoration: none; font-weight: 700; }
+
+  footer { border-top: 1px solid var(--line); padding: 22px 0 60px; font-size: 12px; color: var(--ink3); }
+  footer .wrap { max-width: 1040px; }
+
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; border-radius: 4px; }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 18 18" fill="currentColor"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+  </defs>
+</svg>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brandbar">
+      <div class="brand">
+        <span class="b-mark"><svg width="20" height="20" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0F1720"/></svg></span>
+        <span><span class="b-name">S&amp;S Connect</span><span class="b-claim">Vertrieb · Automation · KI-Infrastruktur</span></span>
+      </div>
+      <div class="brand-for">Projekt-Portal für<b>Kfz Gutachter Es · Mönchengladbach</b></div>
+    </div>
+    <div class="eyebrow">Willkommen in Ihrem Projekt</div>
+    <h1>Ihre Google-Ads-Lead-Maschine — <em>alles an einem Ort.</em></h1>
+    <p class="sub">Auf dieser Seite finden Sie alles zu Ihrem Projekt: die Marktanalyse für Mönchengladbach, Ihr Angebot mit drei Varianten, die Datenblätter und den klickbaren Entwurf Ihrer neuen Landingpage — plus den genauen Ablauf und was wir von Ihnen brauchen, um zu starten.</p>
+  </div>
+</header>
+
+<div class="kpis">
+  <div class="kpi hl"><div class="k-l">Ihr Honorar pro Gutachten</div><div class="k-v">650–1.200&nbsp;€</div><div class="k-s">netto · BVSK 2024, gegen Original geprüft</div></div>
+  <div class="kpi"><div class="k-l">Kosten pro gewonnenem Auftrag</div><div class="k-v">~90–150&nbsp;€</div><div class="k-s">alle Kosten inklusive, je nach Variante</div></div>
+  <div class="kpi"><div class="k-l">Erwartete Aufträge</div><div class="k-v">8–36</div><div class="k-s">pro Monat, je nach gewählter Variante</div></div>
+  <div class="kpi"><div class="k-l">Ihr Vorsprung</div><div class="k-v">24/7</div><div class="k-s">Ihre Erreichbarkeit — hat lokal niemand sonst</div></div>
+</div>
+
+<div class="wrap">
+
+<!-- ================= WORUM GEHT ES ================= -->
+<section id="idee">
+  <div class="eyebrow">Worum es geht — in 60 Sekunden</div>
+  <h2>Wer nach einem Unfall googelt, ruft den Erstbesten an. Das werden Sie sein.</h2>
+  <p class="sec-sub">Jeden Monat suchen im Raum Mönchengladbach mehrere hundert Menschen nach einem KFZ-Gutachter — die meisten direkt nach einem Unfall, vom Handy, mit akutem Handlungsdruck. Google Ads platziert Sie in genau diesem Moment ganz oben. Unsere Analyse zeigt: Die Rechnung geht deutlich auf, weil jedem gewonnenen Auftrag 650–1.200&nbsp;€ Honorar gegenüberstehen, ein Klick aber nur 3–6&nbsp;€ kostet. Und Ihr größtes Pfund haben Sie schon: <b>Sie sind 24/7 erreichbar und bieten Abschleppen, Gutachten und Mietwagen aus einer Hand</b> — das hat keiner Ihrer vier lokalen Wettbewerber im Paket. Die Kampagne muss es nur sichtbar machen.</p>
+</section>
+
+<!-- ================= ABLAUF ================= -->
+<section id="ablauf">
+  <div class="eyebrow">So läuft die Zusammenarbeit</div>
+  <h2>Vom Start bis zu planbaren Leads — die ersten 12 Wochen</h2>
+  <div class="timeline" style="margin-top:26px">
+    <div class="t-step now">
+      <div class="t-when">Jetzt <span class="now-chip">Sie sind hier</span></div>
+      <div class="t-what">Sie sichten die Unterlagen &amp; wählen Ihre Variante</div>
+      <div class="t-det">Alles Nötige finden Sie unten auf dieser Seite. Bei Fragen: einfach anrufen — wir gehen alles gemeinsam durch.</div>
+    </div>
+    <div class="t-step">
+      <div class="t-when">Woche 1–2</div>
+      <div class="t-what">Wir bauen das Fundament</div>
+      <div class="t-det">Echte Suchvolumen-Daten für MG abrufen, Kampagnen aufsetzen, Landingpage finalisieren, Anruf-Messung einrichten. <b>Nichts geht live, bevor Sie Anzeigentexte und Seite freigegeben haben.</b></div>
+    </div>
+    <div class="t-step">
+      <div class="t-when">Woche 3–6</div>
+      <div class="t-what">Testphase — die ersten Leads kommen</div>
+      <div class="t-det">Kampagnen laufen kontrolliert an. Sie merken es am Telefon; wir messen, welche Suchbegriffe Aufträge bringen und welche nur Geld kosten.</div>
+    </div>
+    <div class="t-step">
+      <div class="t-when">Woche 7–12</div>
+      <div class="t-what">Optimieren &amp; automatisieren</div>
+      <div class="t-det">Echte Zahlen ersetzen die Annahmen: Gewinner-Keywords bekommen mehr Budget, Verlierer fliegen raus, dann übernimmt Googles automatisches Bieten mit unserem Kosten-Limit. Ab hier: planbarer Lead-Fluss + monatlicher Klartext-Report.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOKUMENTE ================= -->
+<section id="dokumente">
+  <div class="eyebrow">Ihre Unterlagen</div>
+  <h2>Vier Dokumente — und wie Sie sie lesen</h2>
+  <p class="sec-sub">Sie müssen nicht alles lesen. Bei jedem Dokument steht, was drinsteckt und welcher Teil für Ihre Entscheidung zählt.</p>
+  <div class="docs">
+
+    <div class="doc">
+      <div class="d-head"><span class="d-ic"><svg class="ic"><use href="#i-chart"/></svg></span><span><b>Marktanalyse Mönchengladbach</b><small>PDF · 12 Kapitel · liegt Ihrer E-Mail bei</small></span></div>
+      <p>Die komplette Recherche: Wettbewerber in MG mit Gegenstrategien, Ihre Honorar-Basis (BVSK 2024), Klickpreise, Wirtschaftlichkeitsrechnung, Gebotsstrategie und 12-Wochen-Plan. Jede Kernaussage wurde unabhängig gegengeprüft und ist entsprechend gekennzeichnet.</p>
+      <div class="d-read"><b>Wenn Sie nur 5 Minuten haben:</b> Kapitel 01 (Management Summary) und Kapitel 03 (Ihre vier Wettbewerber — und warum Sie gegen jeden ein Argument haben).</div>
+      <a class="d-cta" href="marktanalyse.html" rel="noopener"><svg class="ic"><use href="#i-ext"/></svg> Online ansehen — mit Rechner</a>
+      <div class="d-note">Interaktive Version inkl. Was-wäre-wenn-Rechner · <a href="pdf/Marktanalyse.pdf">PDF herunterladen</a></div>
+    </div>
+
+    <div class="doc">
+      <div class="d-head"><span class="d-ic"><svg class="ic"><use href="#i-file"/></svg></span><span><b>Ihr Angebot — 3 Varianten</b><small>PDF · 2 Seiten · Nr. 2026-KGE-01</small></span></div>
+      <p>Drei Pakete, die sich <b>nur im Werbebudget</b> unterscheiden — unsere Honorare sind in allen identisch: 490&nbsp;€ Einrichtung (einmalig), optional 290&nbsp;€ Landingpage, 190&nbsp;€/Monat Betreuung. Monatlich kündbar, keine Provision aufs Werbebudget, das Werbekonto gehört Ihnen.</p>
+      <div class="d-read"><b>Zur Beauftragung genügt:</b> Variante ankreuzen und zurücksenden — oder eine formlose Bestätigung per WhatsApp. Neu: detaillierte Vergleichsmatrix aller drei Varianten direkt im Angebot.</div>
+      <a class="d-cta" href="angebot.html" rel="noopener"><svg class="ic"><use href="#i-ext"/></svg> Online ansehen</a>
+      <div class="d-note"><a href="pdf/Angebot.pdf">Unterschriftsfähiges PDF herunterladen</a></div>
+    </div>
+
+    <div class="doc">
+      <div class="d-head"><span class="d-ic"><svg class="ic"><use href="#i-layers"/></svg></span><span><b>Datenblätter zu den Varianten</b><small>PDF · 4 Blätter</small></span></div>
+      <p>Pro Variante ein Blatt: wohin das Budget fließt, welche Klick-, Lead- und Auftragszahlen realistisch sind — und ehrlich: was das jeweilige Budget <b>nicht</b> kann. Blatt 4 schätzt Budgets und Taktik Ihrer Konkurrenz ein.</p>
+      <div class="d-read"><b>Für den Vergleich:</b> Blätter nebeneinanderlegen — der Abschnitt „Was dieses Budget kann / was nicht" macht die Entscheidung meist von selbst.</div>
+      <a class="d-cta" href="datenblaetter.html" rel="noopener"><svg class="ic"><use href="#i-ext"/></svg> Online ansehen</a>
+      <div class="d-note"><a href="pdf/Datenblaetter.pdf">PDF herunterladen</a></div>
+    </div>
+
+    <div class="doc">
+      <div class="d-head"><span class="d-ic"><svg class="ic"><use href="#i-globe"/></svg></span><span><b>Ihre neue Landingpage — Entwurf</b><small>Klickbarer Prototyp · Desktop &amp; Handy</small></span></div>
+      <p>So könnte die Seite aussehen, auf der Ihre Anzeigen-Besucher landen: auf Anrufe optimiert, mit Ihrer 24/7-Erreichbarkeit, WhatsApp-Foto-Einstieg, Ihren Bewertungen und rechtssicherem „Kostenlos"-Versprechen. Öffnen Sie den Entwurf am besten auch einmal auf dem Handy — dort passiert später der meiste Traffic.</p>
+      <div class="d-read"><b>Worauf Sie achten sollten:</b> Stimmen Telefonnummern und Öffnungszeiten? Welche Fotos ersetzen wir durch echte Bilder aus Ihrem Betrieb?</div>
+      <a class="d-cta" href="landingpage.html" rel="noopener"><svg class="ic"><use href="#i-ext"/></svg> Entwurf ansehen</a>
+      <div class="d-note">Tipp: Öffnen Sie den Entwurf auch einmal auf dem Handy — dort passiert später der meiste Traffic.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= VARIANTEN ================= -->
+<section id="varianten">
+  <div class="eyebrow">Ihre Entscheidung</div>
+  <h2>Drei Varianten — der Unterschied ist nur das Werbebudget</h2>
+  <p class="sec-sub">Unsere Leistung und unsere Preise sind in allen drei Varianten gleich. Sie entscheiden nur, wie viel Budget in den Markt geht — und können jederzeit wechseln, ohne Vertragsänderung.</p>
+  <div class="plans" style="margin-top:24px">
+    <div class="plan">
+      <div class="p-name">Start</div>
+      <div class="p-for">Vorsichtig einsteigen und mit echten Zahlen überzeugen lassen</div>
+      <div class="p-budget">1.000&nbsp;€ <span>/ Monat Werbebudget</span></div>
+      <ul>
+        <li>ca. 16–24 Anfragen / Monat</li>
+        <li>ca. 8–12 Aufträge / Monat</li>
+        <li>Nur Kern-Kampagne Mönchengladbach</li>
+      </ul>
+      <div class="p-tot">1. Monat gesamt: <b>1.970 €</b><br>ab Folgemonat: <span class="big">1.190 €/Mon.</span></div>
+    </div>
+    <div class="plan reco">
+      <div class="p-name">Wachstum</div>
+      <div class="p-for">Das beste Verhältnis aus Tempo, Risiko und Marktabdeckung</div>
+      <div class="p-budget">1.500&nbsp;€ <span>/ Monat Werbebudget</span></div>
+      <ul>
+        <li>ca. 24–36 Anfragen / Monat</li>
+        <li>ca. 12–18 Aufträge / Monat</li>
+        <li>MG + Umland (Viersen, Neuss …) + Anruf-Anzeigen</li>
+      </ul>
+      <div class="p-tot">1. Monat gesamt: <b>2.470 €</b><br>ab Folgemonat: <span class="big">1.690 €/Mon.</span></div>
+    </div>
+    <div class="plan">
+      <div class="p-name">Marktdominanz</div>
+      <div class="p-for">Überall ganz oben — wenn die Kapazität dafür da ist</div>
+      <div class="p-budget">3.000&nbsp;€ <span>/ Monat Werbebudget</span></div>
+      <ul>
+        <li>ca. 48–72 Anfragen / Monat</li>
+        <li>ca. 24–36 Aufträge / Monat</li>
+        <li>Alle Kampagnen, Top-Positionen, 24/7 voll ausgespielt</li>
+      </ul>
+      <div class="p-tot">1. Monat gesamt: <b>3.970 €</b><br>ab Folgemonat: <span class="big">3.190 €/Mon.</span></div>
+    </div>
+  </div>
+  <p style="font-size:12px;color:var(--ink3);margin-top:14px;max-width:78ch">Anfrage- und Auftragszahlen sind Modellrechnungen aus der Marktanalyse (Spanne = vorsichtiges bis realistisches Szenario) — keine Garantie, aber jede Annahme ist im Datenblatt offen ausgewiesen und wird in der Testphase durch echte Zahlen ersetzt. Alle Preise zzgl. gesetzl. USt.; Werbebudget rechnet Google direkt mit Ihnen ab.</p>
+</section>
+
+<!-- ================= WAS WIR BRAUCHEN ================= -->
+<section id="brauchen">
+  <div class="eyebrow">Damit wir starten können</div>
+  <h2>Das brauchen wir von Ihnen — 5 Dinge, ca. 20 Minuten</h2>
+  <div class="need" style="margin-top:24px">
+    <div class="n-row"><span class="n-num">1</span><div><b>Ihre Variante <span class="tag-min">wichtigste Entscheidung</span></b><small>Start, Wachstum oder Marktdominanz — formlos per Anruf, WhatsApp oder angekreuztes Angebot.</small></div></div>
+    <div class="n-row"><span class="n-num">2</span><div><b>Link zu Ihrem Google-Unternehmensprofil</b><small>Damit wir Ihre echten 4,9★-Bewertungen auf der Landingpage und in den Anzeigen verlinken können.</small></div></div>
+    <div class="n-row"><span class="n-num">3</span><div><b>Zugang zur Domain gutachten-es.de</b><small>Oder Ihr Webmaster richtet nach unserer Anleitung eine Unterseite ein — die Landingpage liegt fertig bei uns.</small></div></div>
+    <div class="n-row"><span class="n-num">4</span><div><b>Google-Ads-Konto</b><small>Falls vorhanden: Zugriff für uns freischalten. Falls nicht: Wir erstellen es in 10 Minuten gemeinsam — es läuft auf Ihren Namen und bleibt Ihr Eigentum.</small></div></div>
+    <div class="n-row"><span class="n-num">5</span><div><b>3–5 echte Fotos aus Ihrem Betrieb <span class="tag-min">optional, aber stark</span></b><small>Sie bei der Begutachtung, Werkstatt, Hebebühne, Team — echte Bilder schlagen Stockfotos messbar bei der Anrufquote.</small></div></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="eyebrow">Häufige Fragen zur Zusammenarbeit</div>
+  <h2 style="margin-bottom:24px">Kurz beantwortet</h2>
+  <details class="faq" open>
+    <summary>Wie schnell kann ich kündigen, wenn es nicht läuft?</summary>
+    <div class="faq-a">Monatlich, formlos, ohne Begründung. Es gibt keine Mindestlaufzeit. Das Google-Ads-Konto samt allen Kampagnen gehört Ihnen — auch nach einer Kündigung. Das Werbebudget können Sie zusätzlich jederzeit am selben Tag stoppen lassen.</div>
+  </details>
+  <details class="faq">
+    <summary>Wann sehe ich die ersten Anfragen?</summary>
+    <div class="faq-a">Typischerweise in den ersten zwei Wochen nach Livegang — Google-Ads-Anzeigen sind sofort sichtbar, sobald die Kampagne läuft. Aussagekräftige Zahlen (was kostet ein Auftrag wirklich?) haben wir nach der Testphase, also nach etwa 6 Wochen.</div>
+  </details>
+  <details class="faq">
+    <summary>Woher weiß ich, was mein Geld bringt?</summary>
+    <div class="faq-a">Sie bekommen jeden Monat einen Klartext-Report: Wie viele Anrufe und WhatsApp-Anfragen kamen über die Kampagne, was hat eine Anfrage gekostet, was ein Auftrag. Keine Agentur-Kennzahlen-Nebelkerzen — drei Zahlen, die zählen. Zusätzlich haben Sie jederzeit vollen Einblick ins Werbekonto.</div>
+  </details>
+  <details class="faq">
+    <summary>Warum sind Ihre Preise niedriger als bei klassischen Agenturen?</summary>
+    <div class="faq-a">Wir arbeiten mit KI-gestützten Prozessen — Recherche, Kampagnenaufbau und Optimierung laufen bei uns in einem Bruchteil der klassischen Agentur-Zeit. Diesen Effizienzvorteil geben wir weiter: feste, schlanke Pauschalen statt 15–20 % Provision auf Ihr Werbebudget. Deshalb haben wir auch kein Interesse daran, Ihr Budget künstlich aufzublähen.</div>
+  </details>
+  <details class="faq">
+    <summary>Was passiert, wenn ich mehr Anfragen bekomme, als ich schaffe?</summary>
+    <div class="faq-a">Ein gutes Problem — und steuerbar: Das Budget lässt sich tagesgenau drosseln oder pausieren (z.&nbsp;B. im Urlaub). Genau deshalb empfehlen wir den Einstieg mit der Variante „Wachstum" statt „Marktdominanz": erst beweisen, dann skalieren.</div>
+  </details>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<div class="contact-card">
+  <div class="cc-brand">
+    <span class="b-mark"><svg width="24" height="24" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0F1720"/></svg></span>
+    <span>
+      <div class="ccb-name">S&amp;S Connect</div>
+      <div class="ccb-sub">Intelligente Systeme für echtes Wachstum</div>
+    </span>
+  </div>
+  <div class="cc-data">
+    <b>Fragen? Direkt durchrufen — wir gehen alles gemeinsam durch.</b><br>
+    S&amp;S Connect GbR · Schippers &amp; Singh · Nobelstraße 3–5 · 41189 Mönchengladbach<br>
+    <a href="tel:+4915140322125">+49 151 40322125</a> · <a href="https://sundsconnect.de" rel="noopener">sundsconnect.de</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <div class="wrap">© 2026 S&amp;S Connect GbR, Nobelstraße 3–5, 41189 Mönchengladbach. Dieses Portal wurde exklusiv für Kfz Gutachter Es erstellt; alle Inhalte sind vertraulich und urheberrechtlich geschützt. Genannte Erwartungswerte sind Modellrechnungen (Details und Annahmen in Marktanalyse und Datenblättern) und stellen keine Erfolgsgarantie dar. Alle Preise zzgl. gesetzlicher Umsatzsteuer.</div>
+</footer>
+
+</body>
+</html>
