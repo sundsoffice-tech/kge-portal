@@ -81,6 +81,42 @@
   .comp-card .cc-head b { font-size: 11.5px; }
   .comp-card .cc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; font-size: 9.8px; color: var(--ink2); line-height: 1.42; }
 
+  /* ---------- Web-Ansicht: Blatt-Stapel (PDF/Print unberührt) ---------- */
+  @media screen {
+    body { background: #E9EEF1; font-size: 12.5px; padding-bottom: 50px; }
+    .sheet { max-width: 920px; margin: 26px auto; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 18px 50px rgba(15,23,32,0.14); scroll-margin-top: 70px; }
+    .sheet:first-of-type { margin-top: 20px; }
+    .s-head { padding: 18px 34px 15px; }
+    .s-body { padding: 20px 34px 28px; }
+    .s-title { font-size: 26px; }
+    .s-price { font-size: 23px; }
+    .s-intro { font-size: 13px; }
+    h2 { font-size: 13.5px; margin: 16px 0 7px; }
+    .kpis { gap: 10px; }
+    .kpi { padding: 12px 14px 10px; border-radius: 10px; }
+    .kpi .k-l { font-size: 9.5px; }
+    .kpi .k-v { font-size: 20px; }
+    .kpi .k-s { font-size: 10px; }
+    table { font-size: 12px; }
+    th { font-size: 9.5px; padding: 7px 11px; }
+    td { padding: 8px 11px; }
+    .box li { font-size: 12px; margin-bottom: 5px; }
+    .box { padding: 13px 16px 11px; border-radius: 10px; }
+    .box .bx-t { font-size: 10px; }
+    .comp-card { padding: 13px 17px 11px; border-radius: 11px; margin-bottom: 10px; }
+    .comp-card .cc-head b { font-size: 14px; }
+    .comp-card .cc-grid { font-size: 11.5px; gap: 4px 20px; }
+    .callout { font-size: 12px; padding: 11px 15px; }
+    .note { font-size: 10.5px; }
+    .chip { font-size: 10.5px; }
+    /* Blatt-Navigation */
+    .blatt-nav { position: sticky; top: 0; z-index: 60; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 12px 14px; background: rgba(233,238,241,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(15,23,32,0.06); }
+    .blatt-nav a { background: #fff; border: 1.5px solid var(--line); border-radius: 100px; padding: 7px 16px; font-size: 12.5px; font-weight: 650; color: var(--ink2); text-decoration: none; transition: all .12s ease; }
+    .blatt-nav a:hover { border-color: var(--accent); color: var(--accent-ink); }
+    .blatt-nav a.reco { background: var(--accent); border-color: var(--accent); color: #fff; }
+  }
+  @media print { .blatt-nav { display: none; } }
+
   /* Responsive (Bildschirm) */
   @media screen and (max-width: 720px) {
     .s-head { padding: 14px 22px 12px; flex-wrap: wrap; }
@@ -99,9 +135,10 @@
 </style>
 </head>
 <body>
+<nav class="blatt-nav" aria-label="Datenblätter"><a href="#blatt1">Blatt 1 · Start</a><a href="#blatt2" class="reco">Blatt 2 · Wachstum ★</a><a href="#blatt3">Blatt 3 · Marktdominanz</a><a href="#blatt4">Blatt 4 · Konkurrenz</a></nav>
 
 <!-- ============ BLATT 1: START ============ -->
-<div class="sheet">
+<div class="sheet" id="blatt1">
   <div class="s-head">
     <div class="brandbar">
       <span class="b-mark"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0B1117"/></svg></span>
@@ -167,7 +204,7 @@
 </div>
 
 <!-- ============ BLATT 2: WACHSTUM ============ -->
-<div class="sheet">
+<div class="sheet" id="blatt2">
   <div class="s-head">
     <div class="brandbar">
       <span class="b-mark"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0B1117"/></svg></span>
@@ -234,7 +271,7 @@
 </div>
 
 <!-- ============ BLATT 3: MARKTDOMINANZ ============ -->
-<div class="sheet">
+<div class="sheet" id="blatt3">
   <div class="s-head">
     <div class="brandbar">
       <span class="b-mark"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0B1117"/></svg></span>
@@ -304,7 +341,7 @@
 </div>
 
 <!-- ============ BLATT 4: KONKURRENZ ============ -->
-<div class="sheet">
+<div class="sheet" id="blatt4">
   <div class="s-head">
     <div class="brandbar">
       <span class="b-mark"><svg width="16" height="16" viewBox="0 0 18 18" fill="none"><path d="M9 2.5 L15 9.5 H11.5 V15.5 H6.5 V9.5 H3 Z" fill="#0B1117"/></svg></span>
