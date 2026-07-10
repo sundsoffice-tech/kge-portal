@@ -97,6 +97,21 @@
   .pagebreak { break-before: page; }
   h2, .plans, .highlight, .sign { break-inside: avoid; }
   tr { break-inside: avoid; }
+
+  /* Responsive (Bildschirm) */
+  .matrix { overflow-x: auto; }
+  .matrix table { min-width: 640px; }
+  @media screen and (max-width: 760px) {
+    .head { padding: 24px 22px 22px; }
+    .page { padding: 22px 22px 34px; }
+    .plans { grid-template-columns: 1fr; }
+    .plan .p-for { min-height: 0; }
+    .addr-row { flex-direction: column; gap: 14px; }
+    .meta-box { text-align: left; }
+    .fair { grid-template-columns: 1fr; }
+    .sign { flex-direction: column; gap: 8px; }
+    table:not(.matrix table) { display: block; overflow-x: auto; }
+  }
 </style>
 </head>
 <body>
