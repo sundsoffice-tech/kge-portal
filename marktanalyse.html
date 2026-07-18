@@ -379,6 +379,20 @@
   .tbl-wrap { border-radius: 8px; box-shadow: none; }
   .bidchart { border-radius: 8px; box-shadow: none; }
   .contact-card { border-radius: 12px; }
+
+  /* ===== Quick Wins: Tells entfernen (Kennzahlen-Band, gedämpfte Akzente) ===== */
+  .cover { border-top-color: #40808C; }
+  .cover h1 em { font-style: normal; color: inherit; }
+  .contact-card a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .kpis { gap: 0; }
+  .kpi { border-radius: 0; }
+  .kpi + .kpi { border-left: 0; }
+  .kpi:first-child { border-radius: 8px 0 0 8px; }
+  .kpi:last-child { border-radius: 0 8px 8px 0; }
+  @media (max-width: 900px) {
+    .kpis { gap: 12px; }
+    .kpis .kpi { border-radius: 8px; border-left: 1px solid var(--line); }
+  }
   @media print { [class^="kga-"], [class*=" kga-"] { display: none !important; } }
 </style>
 

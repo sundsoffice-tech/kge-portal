@@ -187,6 +187,23 @@
   details.faq { border-radius: 8px; }
   .contact-card { border-radius: 12px; }
   .b-mark { border-radius: 7px; }
+
+  /* ===== Quick Wins: Tells entfernen (Kennzahlen-Band, Asymmetrie, gedämpfte Akzente) ===== */
+  .hero { border-top-color: #40808C; }
+  .doc .d-ic { color: #DCE6E9; }
+  .contact-card a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .kpis { gap: 0; }
+  .kpi { border-radius: 0; }
+  .kpi + .kpi { border-left: 0; }
+  .kpi:first-child { border-radius: 8px 0 0 8px; }
+  .kpi:last-child { border-radius: 0 8px 8px 0; }
+  @media (max-width: 900px) {
+    .kpis { gap: 12px; }
+    .kpis .kpi { border-radius: 8px; border-left: 1px solid var(--line); }
+  }
+  .docs { grid-template-columns: repeat(3, 1fr); }
+  .docs .doc:first-child { grid-column: 1 / -1; }
+  @media (max-width: 860px) { .docs { grid-template-columns: 1fr; } }
   @media print { [class^="kga-"], [class*=" kga-"] { display: none !important; } }
 </style>
 
@@ -212,9 +229,8 @@
       </div>
       <div class="brand-for">Projekt-Portal für<b>Kfz Gutachter Es · Mönchengladbach</b></div>
     </div>
-    <div class="eyebrow">Willkommen in Ihrem Projekt</div>
-    <h1>Ihre Google-Ads-Lead-Maschine — <em>alles an einem Ort.</em></h1>
-    <p class="sub">Auf dieser Seite finden Sie alles zu Ihrem Projekt: die Marktanalyse für Mönchengladbach, Ihr Angebot mit drei Varianten, die Datenblätter und den klickbaren Entwurf Ihrer neuen Landingpage — plus den genauen Ablauf und was wir von Ihnen brauchen, um zu starten.</p>
+    <h1>Ihre Google-Ads-Lead-Maschine: alles an einem Ort.</h1>
+    <p class="sub">Auf dieser Seite finden Sie alles zu Ihrem Projekt: die Marktanalyse für Mönchengladbach, Ihr Angebot mit drei Varianten, die Datenblätter und den klickbaren Entwurf Ihrer neuen Landingpage. Dazu der genaue Ablauf und was wir von Ihnen brauchen, um zu starten.</p>
   </div>
 </header>
 
@@ -229,15 +245,13 @@
 
 <!-- ================= WORUM GEHT ES ================= -->
 <section id="idee">
-  <div class="eyebrow">Worum es geht — in 60 Sekunden</div>
   <h2>Wer nach einem Unfall googelt, ruft den Erstbesten an. Das werden Sie sein.</h2>
   <p class="sec-sub">Jeden Monat suchen im Raum Mönchengladbach mehrere hundert Menschen nach einem KFZ-Gutachter — die meisten direkt nach einem Unfall, vom Handy, mit akutem Handlungsdruck. Google Ads platziert Sie in genau diesem Moment ganz oben. Unsere Analyse zeigt: Die Rechnung geht deutlich auf, weil jedem gewonnenen Auftrag 650–1.200&nbsp;€ Honorar gegenüberstehen, ein Klick aber nur 3–6&nbsp;€ kostet. Und Ihr größtes Pfund haben Sie schon: <b>Bei Ihnen kommt der komplette Rundum-Service aus dem eigenen Haus</b> — eigener Abschleppdienst, Mietwagen aus eigener Flotte, Meisterbetrieb mit Werkstatt. Wettbewerber bewerben Ähnliches, organisieren es laut ihren Websites aber über Dritte. Genau diesen Unterschied macht die Kampagne sichtbar.</p>
 </section>
 
 <!-- ================= ABLAUF ================= -->
 <section id="ablauf">
-  <div class="eyebrow">So läuft die Zusammenarbeit</div>
-  <h2>Vom Start bis zu planbaren Leads — die ersten 12 Wochen</h2>
+  <h2>Vom Start bis zu planbaren Leads: die ersten 12 Wochen</h2>
   <div class="timeline" style="margin-top:26px">
     <div class="t-step now">
       <div class="t-when">Jetzt <span class="now-chip">Sie sind hier</span></div>
@@ -264,8 +278,7 @@
 
 <!-- ================= DOKUMENTE ================= -->
 <section id="dokumente">
-  <div class="eyebrow">Ihre Unterlagen</div>
-  <h2>Vier Dokumente — und wie Sie sie lesen</h2>
+  <h2>Vier Dokumente und wie Sie sie lesen</h2>
   <p class="sec-sub">Sie müssen nicht alles lesen. Bei jedem Dokument steht, was drinsteckt und welcher Teil für Ihre Entscheidung zählt.</p>
   <div class="docs">
 
@@ -306,8 +319,7 @@
 
 <!-- ================= VARIANTEN ================= -->
 <section id="varianten">
-  <div class="eyebrow">Ihre Entscheidung</div>
-  <h2>Drei Varianten — der Unterschied ist nur das Werbebudget</h2>
+  <h2>Drei Varianten, ein Unterschied: das Werbebudget</h2>
   <p class="sec-sub">Unsere Leistung und unsere Preise sind in allen drei Varianten gleich. Sie entscheiden nur, wie viel Budget in den Markt geht — und können jederzeit wechseln, ohne Vertragsänderung.</p>
   <div class="plans" style="margin-top:24px">
     <div class="plan">
@@ -349,8 +361,7 @@
 
 <!-- ================= WAS WIR BRAUCHEN ================= -->
 <section id="brauchen">
-  <div class="eyebrow">Damit wir starten können</div>
-  <h2>Das brauchen wir von Ihnen — 5 Dinge, ca. 20 Minuten</h2>
+  <h2>Das brauchen wir von Ihnen: 5 Dinge, ca. 20 Minuten</h2>
   <div class="need" style="margin-top:24px">
     <div class="n-row"><span class="n-num">1</span><div><b>Ihre Variante <span class="tag-min">wichtigste Entscheidung</span></b><small>Start, Wachstum oder Marktdominanz — formlos per Anruf, WhatsApp oder angekreuztes Angebot.</small></div></div>
     <div class="n-row"><span class="n-num">2</span><div><b>Link zu Ihrem Google-Unternehmensprofil</b><small>Damit wir Ihre echten 4,9★-Bewertungen auf der Landingpage und in den Anzeigen verlinken können.</small></div></div>
@@ -362,8 +373,7 @@
 
 <!-- ================= FAQ ================= -->
 <section id="faq">
-  <div class="eyebrow">Häufige Fragen zur Zusammenarbeit</div>
-  <h2 style="margin-bottom:24px">Kurz beantwortet</h2>
+  <h2 style="margin-bottom:24px">Häufige Fragen, kurz beantwortet</h2>
   <details class="faq" open>
     <summary>Wie schnell kann ich kündigen, wenn es nicht läuft?</summary>
     <div class="faq-a">Monatlich, formlos, ohne Begründung. Es gibt keine Mindestlaufzeit. Das Google-Ads-Konto samt allen Kampagnen gehört Ihnen — auch nach einer Kündigung. Das Werbebudget können Sie zusätzlich jederzeit am selben Tag stoppen lassen.</div>
