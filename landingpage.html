@@ -295,7 +295,18 @@
   .callbar .ic { font-size: 18px; }
   .callbar .cb-call { background: var(--amber); color: var(--navy); }
   .callbar .cb-wa { background: var(--wa); color: #fff; }
-  @media (max-width: 760px) { .callbar { display: grid; } }
+  @media (max-width: 760px) {
+    .callbar { display: grid; }
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  }
+  @media (max-width: 700px) {
+    section { padding: 52px 0; }
+    .hero .wrap { padding-top: 46px; padding-bottom: 56px; }
+    .form { padding: 24px 20px; }
+    .form input, .form textarea { font-size: 16px; }
+    .ctaband .wrap { text-align: center; justify-content: center; }
+    .ctaband .cb-btns { justify-content: center; }
+  }
 
   a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; border-radius: 4px; }
 
