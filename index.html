@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
@@ -162,6 +165,28 @@
     .contact-card { padding: 26px 22px; margin: 44px 0 54px; gap: 20px 30px; }
     .timeline { margin-left: 4px; padding-left: 24px; }
   }
+
+  /* ===== Redesign: Dossier-Charakter (Fraunces + IBM Plex) ===== */
+  :root { --r: 8px; --shadow: 0 1px 2px rgba(15,23,32,0.04); --shadow-lg: 0 16px 40px rgba(15,23,32,0.16); }
+  body { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+  .hero::before, .contact-card::before { display: none; }
+  .hero h1, h2, .kpi .k-v, .plan .p-name, .plan .p-budget, .contact-card .ccb-name { font-family: "Fraunces", Cambria, Georgia, serif; }
+  .hero h1 { font-weight: 600; }
+  .hero h1 em { color: var(--navy-ink); }
+  .eyebrow, .hero .eyebrow { font-family: "IBM Plex Mono", Consolas, monospace; font-weight: 600; font-size: 11.5px; letter-spacing: 0.16em; }
+  .eyebrow::before { width: 8px; height: 8px; border-radius: 1px; }
+  .kpi { border-radius: 6px; box-shadow: none; }
+  .kpi .k-l, .t-when, .doc .d-head small, .doc .d-note, .need .n-num, .now-chip, .tag-min, .plan .p-budget span, .b-claim, .brand-for { font-family: "IBM Plex Mono", Consolas, monospace; }
+  .kpi .k-l { font-size: 9.5px; letter-spacing: 0.1em; }
+  .doc, .plan, .need, details.faq { box-shadow: none; }
+  .doc .d-ic, .doc .d-cta { border-radius: 6px; }
+  .doc .d-read { border-radius: 0 6px 6px 0; border-left: 3px solid var(--teal); }
+  .now-chip, .tag-min { border-radius: 3px; }
+  .need .n-num { border-radius: 4px; }
+  .plan.reco::before { left: 20px; transform: none; border-radius: 3px; font-family: "IBM Plex Mono", Consolas, monospace; letter-spacing: 0.12em; }
+  details.faq { border-radius: 8px; }
+  .contact-card { border-radius: 12px; }
+  .b-mark { border-radius: 7px; }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">

@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 <meta name="description" content="KFZ-Gutachter Mönchengladbach: Unfallgutachten kostenlos bei unverschuldetem Unfall — die gegnerische Versicherung zahlt. Termin in 24h, Abschleppservice & Mietwagen inklusive. 24/7: 02161 622 57 68">
 <meta name="robots" content="noindex">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F5A00A'/%3E%3Ctext x='32' y='42' font-family='Segoe UI,Arial' font-size='28' font-weight='800' fill='%230D1B27' text-anchor='middle'%3EES%3C/text%3E%3C/svg%3E">
@@ -340,6 +343,29 @@
   /* Google-Badge als Link */
   a.g-badge { text-decoration: none; transition: transform 0.15s ease, box-shadow 0.15s ease; }
   a.g-badge:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+  /* ===== Redesign: Signaletik-Look (Archivo, Warn-Amber statt Deko) ===== */
+  :root { --r: 10px; }
+  body, .form input, .form textarea, .form button { font-family: "Archivo", "Segoe UI", system-ui, sans-serif; }
+  .hero h1 { font-weight: 800; letter-spacing: -0.02em; }
+  .hero h1 em { background: var(--amber); color: var(--navy); padding: 0 10px 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .h-badge { border-radius: 5px; }
+  .eyebrow::before { width: 10px; height: 10px; border-radius: 1px; }
+  .pay > .wrap::before, .pay > .wrap::after, .contact::before, .contact::after, .ctaband .wrap::before { display: none; }
+  .btn { border-radius: 9px; }
+  .btn.call, .btn.call:hover { box-shadow: 0 3px 0 var(--amber-dark); }
+  .btn.wa, .btn.wa:hover { box-shadow: 0 3px 0 var(--wa-dark); }
+  .top-call { border-radius: 9px; }
+  .g-badge { border-radius: 9px; box-shadow: none; }
+  .serv-img .si-tag { border-radius: 5px; }
+  .step .s-time { border-radius: 4px; }
+  .chip { border-radius: 5px; }
+  .callbar a { border-radius: 9px; }
+  .rev, .sv, .fact { box-shadow: none; }
+  .sv:hover { transform: none; box-shadow: none; }
+  .form input, .form textarea { border-radius: 8px; }
+  .form button { border-radius: 8px; }
+  .l-mark { border-radius: 8px; }
 </style>
 
 <!-- SVG icon sprite -->

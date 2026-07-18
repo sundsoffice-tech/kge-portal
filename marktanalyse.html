@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
@@ -365,6 +368,17 @@
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   html { scroll-behavior: smooth; }
+
+  /* ===== Redesign: Dossier-Charakter (Fraunces + IBM Plex) ===== */
+  body { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+  .cover h1, h2, .kpi .k-value, .verdict .v-main, .calc .cal-title, .cal-out .co .co-v, .scen h3, .scen .s-budget, .contact-card .cc-brand .ccb-name { font-family: "Fraunces", Cambria, Georgia, serif; }
+  .cover .eyebrow, .kpi .k-label, .toc .t-head, th, .cc-tag, .cal-out .co .co-l, .scen .s-tag, .fs-label span { font-family: "IBM Plex Mono", Consolas, monospace; }
+  .chip { border-radius: 3px; }
+  .scen.reco::before { border-radius: 3px; font-family: "IBM Plex Mono", Consolas, monospace; letter-spacing: 0.1em; }
+  .kpi { border-radius: 6px; box-shadow: none; }
+  .tbl-wrap { border-radius: 8px; box-shadow: none; }
+  .bidchart { border-radius: 8px; box-shadow: none; }
+  .contact-card { border-radius: 12px; }
 </style>
 
 <!-- ================= COVER ================= -->

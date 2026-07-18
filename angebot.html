@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex, nofollow">
 <title>Angebot · Google Ads Lead-Generierung · Kfz Gutachter Es</title>
 <style>
@@ -183,6 +186,30 @@
     .head-actions a { flex: 1 1 auto; justify-content: center; }
     .order { padding: 22px 18px 20px; border-radius: 14px; }
     h2 { margin-top: 34px; }
+  }
+
+  /* ===== Redesign: Dossier-Charakter (Fraunces + IBM Plex) ===== */
+  body { font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; }
+  .head h1, h2, .plan .p-name, .plan .p-budget { font-family: "Fraunces", Cambria, Georgia, serif; }
+  .addr .a-tag, th, .plan .p-bl, .b-claim { font-family: "IBM Plex Mono", Consolas, monospace; }
+  .addr .a-tag { letter-spacing: 0.1em; }
+  .plan { border-radius: 8px; }
+  .highlight { border-radius: 0 8px 8px 0; }
+  .plan.reco::before { left: 16px; transform: none; border-radius: 3px; font-family: "IBM Plex Mono", Consolas, monospace; letter-spacing: 0.1em; }
+  .fair li::before { border-radius: 2px; }
+  @media screen {
+    .head::after, .order::before { display: none; }
+    .order .o-t { font-family: "Fraunces", Cambria, Georgia, serif; }
+    .head-actions a { border-radius: 8px; }
+    .head-actions a:hover { transform: none; }
+    .order { border-radius: 12px; }
+    .order-btns a { border-radius: 8px; }
+    .order-btns a:hover { transform: none; }
+    .addr-row { border-radius: 8px; box-shadow: none; }
+    .plan { box-shadow: none; }
+    .plan:hover { transform: none; box-shadow: none; }
+    .matrix { box-shadow: none; border-radius: 8px; }
+    .page > table { border-radius: 8px; box-shadow: none; }
   }
 </style>
 </head>
